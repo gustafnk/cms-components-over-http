@@ -1,0 +1,19 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "arrow-parens": 0,
+    "import/no-unresolved": 0,
+    "max-len": [2, { "code": 120, "comments": 80 }],
+    "new-cap": 0,
+    "no-console": 0,
+    "no-underscore-dangle": 0,
+    "no-use-before-define": 0,
+    "object-curly-spacing": ["error", "always"],
+    "object-shorthand": 0,
+    "prefer-template": "warn",
+    "space-before-function-paren": 0,
+    "strict": 0,
+    "arrow-body-style": 0,
+    "global-require": 0
+  }
+}

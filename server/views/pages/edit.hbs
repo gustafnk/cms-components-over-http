@@ -1,0 +1,35 @@
+<h1>CMS components over HTTP</h1>
+
+<h2>Edit page</h2>
+<form method="POST" action="/pages/edit/id">
+
+  {{#each content }}
+    <esi:include src="{{ this.componentUrl }}" />
+    <hr>
+  {{/each}}
+
+  <button type="submit">Save</button>
+</form>
+
+<br>
+
+<form method="POST" action="/pages/edit/id/render">
+  <button type="submit">Render saved state</button>
+</form>
+
+<hr>
+
+<form method="POST" action="/pages/edit/id/add-component">
+  <h2>Add component</h2>
+  <select name="type">
+    {{#each availableComponents }}
+      <option value="{{ this.name }}">{{ this.label }}</option>
+    {{/each}}
+  </select>
+
+  <button type="submit">Add component</button>
+</form>
+
+<hr>
+<h2>View result</h2>
+<a href="/page.html">Go to rendered page</a> (need to push render button)
